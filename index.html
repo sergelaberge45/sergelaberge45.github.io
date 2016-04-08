@@ -3,6 +3,9 @@
 		<title>Testing Google Tag Manager</title>
 	</head>
 	<body>
+		<script>
+			dataLayer = [];
+		</script>
 		<!-- Google Tag Manager -->
 		<noscript><iframe src="//www.googletagmanager.com/ns.html?id=GTM-5GMZZF"
 		height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
@@ -13,12 +16,13 @@
 		})(window,document,'script','dataLayer','GTM-5GMZZF');</script>
 		<!-- End Google Tag Manager -->
 		
-		<a id="addToWishlist" href="#" onclick="AddToWishList('patate')">Add to wishlist</a>
+		<a id="addToWishlist" href="#" onclick="AddToWishList('patate'))">Add to wishlist</a>
 		<script>
 			var wishlist = {};
 			
 			function AddToWishList(item){
 				wishlist = item;
+				dataLayer.push({'AddedWishlistItem': item}
 			}
 		</script>
 		
