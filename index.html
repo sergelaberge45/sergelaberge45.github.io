@@ -15,16 +15,14 @@
 		'//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
 		})(window,document,'script','dataLayer','GTM-5GMZZF');</script>
 		<!-- End Google Tag Manager -->
-		
-		<a id="addToWishlist" href="#" onclick="AddToWishList('patate'))">Add to wishlist</a>
 		<script>
-			var wishlist = {};
 			
-			function AddToWishList(item){
-				wishlist = item;
-				dataLayer.push({'AddedWishlistItem': item}
+			function sendEvent(){
+				dataLayer.push({'event': 'monSuperEvent'});
 			}
 		</script>
+		
+		<button onclick="sendEvent();">Send an event</button>
 		
 		<br>
 		<br>
